@@ -6,6 +6,7 @@ def biseccion(f,a,b,tol):#Definimos la función llamada bisección
 	m1=a
 	m=b
 	k=0
+	print("\nMétodo de Bisección\n")
 	if(f(a)*f(b)>0):
 		print('La función no cambia de signo en el intervalo dado.')
 		return None
@@ -21,10 +22,9 @@ def biseccion(f,a,b,tol):#Definimos la función llamada bisección
 		k=k+1;
 
 	print('m(',k,') =',m1,' es la mejor solución aproximada')
-
-
+	
 f = lambda x: e**x - 3*x**2 #sin (x) - e**-x
 a = 0
 b = 1
 tol = 0.03
-biseccion(f, a, b, tol) 
+solucion = biseccion(f, 0, 1, 0.03) 
