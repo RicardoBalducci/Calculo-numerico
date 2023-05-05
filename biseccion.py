@@ -20,10 +20,13 @@ def biseccion(f,a,b,tol,ni):
 		contador=contador+1
 	print('\nEs la mejor solución aproximada se encuentra en m(',contador-1,') =',p_actual,'\n')	
 	print("El error relativo es: ",Error_a)
-f = lambda x: e**x - 3*x**2 #funcion 
-# otro ejercicio sin (x) - e**-x
-a = 0 # intervalo a
-b = 1 # intervalo B
-tol = 0.03 
-ni = 50 # Numero de iteracciones
-solucion = biseccion(f, 0, 1, 0.03, ni) 
+
+if __name__ == '__main__':
+	f = lambda x: sin (x) - e**-x #funcion 
+	# otro ejercicio sin (x) - e**-x 0 1
+	# otro ejercicio e**x - 3*x**2 0 1
+	a = 0 # intervalo a
+	b = 1 # intervalo B
+	tol = 0.03 
+	ni = 50 # Numero de iteracciones
+	solucion = biseccion(f, 0, 1, 0.03, ni) 
