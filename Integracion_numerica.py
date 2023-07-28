@@ -24,16 +24,16 @@ def trapecio(a, b, n):
         suma += f(x)
     return h * suma
 
+if __name__ == '__main__':
+    a = -1      # inicio del intervalo
+    b = 1     # fin del intervalo
+    n = 5   # numero de participaciones
 
-a = -1      # inicio del intervalo
-b = 1     # fin del intervalo
-n = 5   # numero de participaciones
+    riemann = suma_riemann(f, a, b, n)
+    trapecio = trapecio(a, b, n)
 
-riemann = suma_riemann(f, a, b, n)
-trapecio = trapecio(a, b, n)
-
-print("\t.:Integracion Numerica:.")
-print("-------------------------------------")
-print("Suma de Riemann en funcion f(x) para",a," y ",b, "en ", n, " intentos: ",riemann)
-print("-------------------------------------")
-print("Metodo de Trapecio en funcion f(x) para",a," y ",b," en ",n,"intentos: ",trapecio)
+    print("\t.:Integracion Numerica:.")
+    print("-------------------------------------")
+    print("Suma de Riemann en funcion f(x) para",a," y ",b, "en ", n, " intentos: ",riemann)
+    print("-------------------------------------")
+    print("Metodo de Trapecio en funcion f(x) para",a," y ",b," en ",n,"intentos: ",trapecio)
